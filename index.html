@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Photo Feed Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand col-sm-4 col-md-9 p-0" style="margin-left: 40px;" href="#">
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" style="margin-left: 20px;" id="navbarNavDropdown">
+        <ul class="navbar-nav d-flex justify-content-end align-items-center">
+            <li class="nav-item">
+              <a class="nav-link">
+                <button id="navbar-toggler" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Create a new post
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <h6>Caption:</h6>
+                        <textarea class="form-control col-12" placeholder="Add the caption of you post here" rows="2"></textarea>
+                        <div class="d-grid gap-2 d-md-block m-1 d-flex justify-content-start">
+                          <button class="border-0 col-1 p-2 rounded-1 bg-light" type="button"> <i class="fa-solid fa-camera"></i> </button>
+                          <button class="border-0 col-1 p-2 rounded-1 bg-light" type="button"><i class="fa-solid fa-location-dot"></i></button>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+          </li>
+          <li class="nav-item dropdown d-flex justify-content-end align-items-center">
+            <button type="button" class="nav-link dropdown-toggle text-light bg-secondary p-2 rounded-2 border-0" data-bs-toggle="dropdown"  aria-expanded="false">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   
+  <!--Inicio tabs-->
+      <div class="container-fluid">
+        <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"> <i class="fa-solid fa-table-cells"></i> </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"> <i class="fa-solid fa-table-cells"></i> </button>
+          </li>
+        </ul>
+    
+  <!--Inicio contenido primer tab-->
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 d-flex mt-1" >
+                    <img class="col-4 p-2" class="img-fluid justify-content-center align-items-center" src="https://images.unsplash.com/photo-1667093060577-02f07eb01585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80" alt="">
+                    <img class="col-4 p-2" class="img-fluid justify-content-center align-items-center" src="https://images.unsplash.com/photo-1676271608840-9712fe255ae0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE5fHhIeFlUTUhMZ09jfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    <img class="col-4 p-2" class="img-fluid justify-content-center align-items-center" src="https://images.unsplash.com/photo-1676275063220-47705ad78e17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQ3fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 d-flex mt-1" >
+                    <img class="col-4 p-2" class="img-fluid justify-content-center align-items-center" src="https://images.unsplash.com/photo-1671662787480-bf37a5ebe358?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU2fHhIeFlUTUhMZ09jfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    <img class="col-4 p-2" class="img-fluid justify-content-center align-items-center" src="https://images.unsplash.com/photo-1671483330944-36bbbe090e8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDYxfHhIeFlUTUhMZ09jfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    <img class="col-4 p-2" class="img-fluid justify-content-center align-items-center" src="https://images.unsplash.com/photo-1671364546528-dea96bc65f1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU0fHhIeFlUTUhMZ09jfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 d-flex mt-1" >
+                    <img class="col-4 p-2" class="img-fluid justify-content-center align-items-center" src="https://images.unsplash.com/photo-1667093060577-02f07eb01585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80" alt="">
+                    <img class="col-4 p-2" class="img-fluid justify-content-center align-items-center" src="https://images.unsplash.com/photo-1676325758092-ae583b17d09c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80" alt="">
+                    <img class="col-4 p-2" class="img-fluid justify-content-center align-items-center"src="https://images.unsplash.com/photo-1675328336741-e8c6d8891948?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDk5fHhIeFlUTUhMZ09jfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+              </div>
+          </div>
+        </div>
+
+    
+  <!--Inicio contenido de segundo tab-->
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+            <div class="container-fluid">
+              <div class="row m-4">
+                <div class="col-12 d-flex justify-content-center">
+                  <div class="card col-sm-6 col-md-6" style="width: 80vh;">
+                    <div class="card-body p-0">
+                      <div class="d-flex justify-content-between m-2 p-1">
+                        <h5 class="card-title m-0">Caminando en la playa</h5>
+                        <h6 class="text-muted m-0">1/3</h6>
+                      </div>
+                      <img class="img-fluid" alt="..." src="https://images.unsplash.com/photo-1667093060577-02f07eb01585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80">
+                      <h6 class="m-2 text-dark">350 likes</h6>
+                      <p class="card-text m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="row m-4">
+                <div class="col-12 d-flex justify-content-center">
+                  <div class="card col-sm-6 col-md-6" style="width: 80vh;">
+                    <div class="card-body p-0">
+                      <div class="d-flex justify-content-between m-2 p-1">
+                        <h5 class="card-title m-0">En la estacion</h5>
+                        <h6 class="text-muted m-0">2/3</h6>
+                      </div>
+                      <img class="img-fluid col-12" alt="..." src="https://images.unsplash.com/photo-1676271608840-9712fe255ae0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE5fHhIeFlUTUhMZ09jfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
+                      <h6 class="m-2 text-dark">200 likes</h6>
+                      <p class="card-text m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="row m-4">
+                <div class="col-12 d-flex justify-content-center">
+                  <div class="card col-sm-6 col-md-6" style="width: 80vh;">
+                    <div class="card-body p-0">
+                      <div class="d-flex justify-content-between m-2 p-1">
+                        <h5 class="card-title m-0">Atardecer</h5>
+                        <h6 class="text-muted m-0">3/3</h6>
+                      </div>
+                      <img class="img-fluid col-12" alt="..." src="https://images.unsplash.com/photo-1676275063220-47705ad78e17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQ3fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
+                      <h6 class="m-2 text-dark">280 likes</h6>
+                      <p class="card-text m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4d3788fdc0.js" crossorigin="anonymous"></script>
+</body>
+</html>
